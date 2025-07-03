@@ -18,6 +18,9 @@ app.use("/api/auth", require("./routes/auth"));
 // Task routes
 app.use("/api/tasks", require("./routes/tasks"));
 
+// Upload route
+app.use("/api/upload", require("./routes/upload"));
+
 // 👇 Add these friendly default routes here
 app.get("/", (req, res) => {
   res.send("✅ Task Manager Backend is running");
