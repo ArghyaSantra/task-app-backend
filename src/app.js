@@ -14,6 +14,15 @@ mongoose
 
 app.use("/api/tasks", require("./routes/tasks"));
 
+// 👇 Add these friendly default routes here
+app.get("/", (req, res) => {
+  res.send("✅ Task Manager Backend is running");
+});
+
+app.get("/api", (req, res) => {
+  res.send("✅ API base endpoint — Task Manager Backend");
+});
+
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server running on port ${process.env.PORT || 5000}`);
 });
