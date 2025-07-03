@@ -15,3 +15,8 @@ exports.deleteTask = async (req, res) => {
   await Task.findByIdAndDelete(req.params.id);
   res.json({ message: "Deleted successfully" });
 };
+
+exports.pendingAssignments = async (req, res) => {
+  //await Task.findByIdAndDelete(req.params.id);
+  //res.json({ message: "Deleted successfully" });
+};
