@@ -12,6 +12,10 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
+// Auth routes
+app.use("/api/auth", require("./routes/auth"));
+
+// Task routes
 app.use("/api/tasks", require("./routes/tasks"));
 
 // 👇 Add these friendly default routes here
